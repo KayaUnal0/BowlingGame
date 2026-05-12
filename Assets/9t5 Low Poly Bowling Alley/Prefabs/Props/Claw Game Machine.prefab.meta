@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 13adb669466bb5843b393c991b77b91d
+timeCreated: 1540603057
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Props/Claw Game Machine.prefab
+  uploadId: 276137

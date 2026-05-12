@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a0111e29c66117540973e93201f5b6d2
+timeCreated: 1540532865
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Props/Bowling Pin.prefab
+  uploadId: 276137

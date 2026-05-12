@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c0a7266bab511ef47aa9b585cc155fac
+timeCreated: 1541049448
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Props/Bowling Shoe.prefab
+  uploadId: 276137

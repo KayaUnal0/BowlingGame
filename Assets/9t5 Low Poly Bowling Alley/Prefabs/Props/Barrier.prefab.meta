@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 579d33c2cfd56dd4e9e32995c6e5af68
+timeCreated: 1540973438
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Props/Barrier.prefab
+  uploadId: 276137

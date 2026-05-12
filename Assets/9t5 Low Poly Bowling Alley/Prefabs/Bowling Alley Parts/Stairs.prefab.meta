@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 21ec0dd5e3e04f94e91ddab3c9a1209c
+timeCreated: 1540442899
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Bowling Alley Parts/Stairs.prefab
+  uploadId: 276137

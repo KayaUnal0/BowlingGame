@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 75660153a5cf9f54ba713d31134cd416
+timeCreated: 1540806625
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Props/Race Car Machine.prefab
+  uploadId: 276137

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 745f2f6beade5b54d954c0be74c59cd4
+timeCreated: 1540523816
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Props/Booth Corner.prefab
+  uploadId: 276137

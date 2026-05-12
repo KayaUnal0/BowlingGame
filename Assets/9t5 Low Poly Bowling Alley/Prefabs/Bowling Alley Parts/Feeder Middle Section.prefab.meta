@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 38adb022a0fc9f740abf1a7b2289960c
+timeCreated: 1540438596
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132238
+  packageName: 9t5 Low Poly Bowling Alley (Modular)
+  packageVersion: 1.0
+  assetPath: Assets/9t5 Low Poly Bowling Alley/Prefabs/Bowling Alley Parts/Feeder
+    Middle Section.prefab
+  uploadId: 276137
