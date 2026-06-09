@@ -7,13 +7,18 @@ public class PlayerSetupController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 4f;
-    [SerializeField] private float rotationSpeed = 90f;
 
     [Header("Lane Limits")]
     [SerializeField] private float minSidePosition;
     [SerializeField] private float maxSidePosition;
 
     private float currentSidePosition;
+    private BallThrower thrower;
+
+    private void Awake()
+    {
+        thrower = GetComponent<BallThrower>();
+    }
 
     private void Start()
     {
@@ -29,18 +34,23 @@ public class PlayerSetupController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance == null)
+            return;
+
         if (!GameManager.Instance.IsStage(GameStage.PlayerSetup))
             return;
 
         if (laneReference == null)
             return;
 
-        HandleMovement();
-        HandleAiming();
+        if (InputManager.Instance == null || InputManager.Instance.GameInput == null)
+            return;
+
+        HandleSideMovement();
         HandleThrowInput();
     }
 
-    private void HandleMovement()
+    private void HandleSideMovement()
     {
         Vector2 input = InputManager.Instance.GameInput.MoveInput;
 
@@ -53,28 +63,18 @@ public class PlayerSetupController : MonoBehaviour
         transform.position = laneReference.TransformPoint(localPosition);
     }
 
-    private void HandleAiming()
-    {
-        Vector2 aimInput = InputManager.Instance.GameInput.AimInput;
-
-        float rotationAmount = aimInput.x * rotationSpeed * Time.deltaTime;
-        transform.Rotate(Vector3.up, rotationAmount, Space.World);
-    }
-
     private void HandleThrowInput()
     {
-        if (InputManager.Instance.GameInput.ThrowPressed)
-        {
-            BallThrower thrower = GetComponent<BallThrower>();
+        if (!InputManager.Instance.GameInput.ThrowPressed)
+            return;
 
-            if (thrower != null)
-            {
-                thrower.ThrowBall();
-            }
-            else
-            {
-                Debug.LogError("No BallThrower found on player.");
-            }
+        if (thrower != null)
+        {
+            thrower.ThrowBall();
+        }
+        else
+        {
+            Debug.LogError("No BallThrower found on player.");
         }
     }
 }

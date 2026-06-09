@@ -8,12 +8,12 @@ public class BallController : MonoBehaviour
     [SerializeField] private float forwardAssistForce = 2f;
     [SerializeField] private float maxSpeed = 18f;
 
-    [Header("Ground Check")]
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float groundCheckDistance = 0.6f;
+    [Header("Pin Collision")]
+    [SerializeField] private bool loseControlWhenHittingPins = true;
 
     private Rigidbody rb;
     private bool canControl;
+    private bool hasHitPin;
 
     private void Awake()
     {
@@ -32,9 +32,32 @@ public class BallController : MonoBehaviour
         LimitSpeed();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!loseControlWhenHittingPins)
+            return;
+
+        if (hasHitPin)
+            return;
+
+        if (!GameManager.Instance.IsStage(GameStage.BallControl))
+            return;
+
+        Pin pin = collision.collider.GetComponentInParent<Pin>();
+
+        if (pin == null)
+            return;
+
+        hasHitPin = true;
+        DeactivateControl();
+
+        GameManager.Instance.ChangeStage(GameStage.Spectator);
+    }
+
     public void ActivateControl()
     {
         canControl = true;
+        hasHitPin = false;
     }
 
     public void DeactivateControl()

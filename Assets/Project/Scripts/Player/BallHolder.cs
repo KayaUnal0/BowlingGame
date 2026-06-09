@@ -49,10 +49,16 @@ public class BallHolder : MonoBehaviour
 
         if (heldBallRigidbody != null)
         {
-            heldBallRigidbody.isKinematic = true;
-            heldBallRigidbody.useGravity = false;
+            // First make sure the Rigidbody is not kinematic
+            // so Unity allows us to clear velocity.
+            heldBallRigidbody.isKinematic = false;
+
             heldBallRigidbody.linearVelocity = Vector3.zero;
             heldBallRigidbody.angularVelocity = Vector3.zero;
+
+            // Now make it kinematic because the holder controls its position.
+            heldBallRigidbody.isKinematic = true;
+            heldBallRigidbody.useGravity = false;
         }
 
         heldBall.DeactivateControl();
@@ -77,8 +83,10 @@ public class BallHolder : MonoBehaviour
 
         if (heldBallRigidbody != null)
         {
+            // When releasing, physics should control the ball.
             heldBallRigidbody.isKinematic = false;
             heldBallRigidbody.useGravity = true;
+
             heldBallRigidbody.linearVelocity = Vector3.zero;
             heldBallRigidbody.angularVelocity = Vector3.zero;
         }
